@@ -15,5 +15,9 @@ This file will serve a log to myself as well as to the rest of the community. At
 4. What are some of the best hosting options?
 5. More questions to come...
 
+## Requirements
+
+1. Works on Windows and Mac
+
 ## Your Role
 Know more than me? (You probably do.) Feel free to contribute!

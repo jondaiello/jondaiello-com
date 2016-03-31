@@ -1,3 +1,3 @@
 # Research Topics
 
-- [Static Site Generation](static-site-generation.md)
+- [Static Site Generation](static-site-generators.md)

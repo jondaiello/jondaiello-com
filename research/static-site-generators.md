@@ -8,6 +8,7 @@ This file will serve a log to myself as well as to the rest of the community. At
 1. How in the WORLD do I choose one [StaticGen](https://www.staticgen.com/)?
 2. What's the best method to build and deploy the site?
 3. I'd like to be able to post and deploy from any device (even a phone), is this possible?
+  I wonder if I could use something like [StackEditor](https://stackedit.io/) to accomplish this...
 4. What are some of the best hosting options?
 5. More questions to come...
 

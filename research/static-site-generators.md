@@ -3,8 +3,12 @@ I've been using typical dynamic content management systems ever ([ExpressionEngi
 
 This file will serve a log to myself as well as to the rest of the community. At some point, I'll make a blog post about my decision making process and the end result.
 
-## Questions
+## Requirements
+1. It's going to work for my workflow.
+2. Works on Windows and Mac.
 
+
+## Questions
 1. How in the WORLD do I choose one [StaticGen](https://www.staticgen.com/)?
 2. What's the best method to build and deploy the site?
 3. I'd like to be able to post and deploy from any device (even a phone), is this possible?
@@ -14,10 +18,6 @@ This file will serve a log to myself as well as to the rest of the community. At
     - [(GitHub-Flavored) Markdown Editor](http://jbt.github.io/markdown-editor/)
 4. What are some of the best hosting options?
 5. More questions to come...
-
-## Requirements
-
-1. Works on Windows and Mac
 
 ## Your Role
 Know more than me? (You probably do.) Feel free to contribute!

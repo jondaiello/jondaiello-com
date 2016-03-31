@@ -1,9 +1,12 @@
 # JonDaiello.com
-This is the repository for my personal site. I'm redesigning and rebuilding my site with the following goals:
+This is the repository for my personal site. I'm redesigning and rebuilding my site from the ground up. 
 
-1. Continuously improve it through design and development
-2. Learn new things through the process
-3. Improve performance
-4. Improve accessibility
+"Why?", you ask? Well, here are a list of goals for my new site:
 
-This is the purpose of the redesign.
+1. Improve performance
+2. Improve accessibility
+3. Level challenge myself, extend my skillset and learn new stuff
+4. Leave jQuery behind...
+5. Continuously improve it through design and development
+
+These are the purpose of the redesign.

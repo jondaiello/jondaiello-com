@@ -10,3 +10,10 @@ This is the repository for my personal site. I'm redesigning and rebuilding my s
 5. Continuously improve it through design and development
 
 These are the purpose of the redesign.
+
+## The Rough Plan
+- Write the universal/baseline styles to the page in a `&gt;style&lt;` element.
+- Write performance driven vanilla javascript
+- Keep the front page under 200kb on cellular networks (some detection required)
+- Utilize SVGs & CSS shapes
+- Make use of system fonts

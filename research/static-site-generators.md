@@ -10,6 +10,10 @@ This file will serve a log to myself as well as to the rest of the community. At
 
 ## Questions
 1. How in the WORLD do I choose one [StaticGen](https://www.staticgen.com/)?
+  - I think it's down to three options:
+    - [Jekyll](https://jekyllrb.com/docs/home/) +2 votes already from suggestions
+    - [Middleman](https://middlemanapp.com/basics/blogging/)
+    - [Metalsmith](http://www.metalsmith.io/) Has lots of plugins, albeit possibly unnecessary
 2. What's the best method to build and deploy the site?
 3. I'd like to be able to post and deploy from any device (even a phone), is this possible?
   - I wonder if I could use something like:

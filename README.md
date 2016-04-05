@@ -17,3 +17,4 @@ These are the purpose of the redesign.
 - Keep the front page under 200kb on cellular networks (some detection required)
 - Utilize SVGs & CSS shapes
 - Make use of system fonts
+- Use Gulp via npm.

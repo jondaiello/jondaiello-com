@@ -1,0 +1,58 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import "animations.scss";
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+body {
+  font-size: 1.25em;
+  line-height: 1.61em;
+  font-family: $basefont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headlinefont;
+  font-weight: normal;
+}
+
+a {
+  color: $linkcolor;
+  @include transition(.2s all linear);
+}
+
+a:hover {
+  color: $linkhover;
+}
+
+.global-nav {
+  font-family: $navigationfont;
+  text-transform: uppercase;
+  font-size: 0.65em;
+  letter-spacing: .1em;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+
+p, ul, ol {
+  a:hover {
+    @include animation(linkhover .5s linear 0 infinite alternate);
+  }
+}

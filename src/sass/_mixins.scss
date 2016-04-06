@@ -1,0 +1,24 @@
+@mixin box-sizing($method) {
+  -webkit-box-sizing: $method;
+     -moz-box-sizing: $method;
+      -ms-box-sizing: $method;
+       -o-box-sizing: $method;
+          box-sizing: $method;
+}
+
+
+@mixin transition($settings) {
+  -webkit-transition: $settings;
+     -moz-transition: $settings;
+      -ms-transition: $settings;
+       -o-transition: $settings;
+          transition: $settings;
+}
+
+@mixin animation($settings) {
+  -webkit-animation: $settings;
+     -moz-animation: $settings;
+      -ms-animation: $settings;
+       -o-animation: $settings;
+          animation: $settings;
+}

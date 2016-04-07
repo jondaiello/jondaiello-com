@@ -11,10 +11,12 @@ This is the repository for my personal site. I'm redesigning and rebuilding my s
 
 These are the purpose of the redesign.
 
-## The Rough Plan
-- Write the universal/baseline styles to the page in a `<style>` element.
-- Write performance driven vanilla javascript
+## Project Targets
+- Write the universal/baseline styles to the page in a `<style>` element if it is beneficial.
+- Write performance driven vanilla Javascript.
 - Keep the front page under 200kb on cellular networks (some detection required)
+- 1 second perceived load time
 - Utilize SVGs & CSS shapes
 - Make use of system fonts
 - Use Gulp via npm.
+- It works (well) without Javascript.

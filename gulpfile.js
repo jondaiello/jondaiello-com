@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var svgSprite = require('gulp-svg-sprite');
 
 gulp.task('js', function() {
   return gulp.src('./src/js/*.js')
@@ -44,4 +45,20 @@ gulp.task('img:watch', function () {
   gulp.watch('./src/img/*', ['img']);
 });
 
-gulp.task('default', ['sass', 'js', 'img']);
+// Basic configuration example
+var svgConfig = {
+	mode : {
+    symbol : true
+	}
+};
+
+gulp.task('svgs', function() {
+  return gulp.src('./src/svg/*.svg')
+	.pipe(svgSprite(svgConfig))
+	.pipe(gulp.dest('./assets/img/sprite.svg'));
+});
+gulp.task('svgs:watch', function () {
+  gulp.watch('./src/svg/*.svg', ['svgs']);
+});
+
+gulp.task('default', ['sass', 'js', 'img', 'svgs']);

@@ -50,6 +50,15 @@ a:hover {
   }
 }
 
+.global-face {
+  max-width: 20%;
+  display: block;
+
+  &__image {
+    display: block;
+  }
+}
+
 
 p, ul, ol {
   a:hover {

@@ -49,6 +49,12 @@ a:hover {
     color: #848476;
     text-decoration: none; }
 
+.global-face {
+  max-width: 20%;
+  display: block; }
+  .global-face__image {
+    display: block; }
+
 p a:hover, ul a:hover, ol a:hover {
   -webkit-animation: linkhover 0.5s linear 0 infinite alternate;
   -moz-animation: linkhover 0.5s linear 0 infinite alternate;

@@ -1,7 +1,4 @@
 # JonDaiello.com
-
-[![NPM version][npm-image]][npm-url]
-
 This is the repository for my personal site. I'm redesigning and rebuilding my site from the ground up. 
 
 "Why?", you ask? Well, here are a list of goals for my new site:

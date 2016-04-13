@@ -9,10 +9,24 @@
   <link href="/assets/css/critical.css" rel="stylesheet" />
 </head>
 <body>
-  <header class="global-header">
+  <header class="global-header content-width">
     <!--<link href="/assets/css/head.css" />-->
 
-    <a href="#" class="global-face"><img src="/assets/img/jon-daiello-avatar.jpg" alt="Jon Daiello photo" class="global-face__image" style="clip-path: url(#hexagon);" /></a>
+    <svg class="global-face" viewBox="0,0 100,100">
+      <title>The Face of Jon Daiello</title>
+      <a xlink:href="#" clip-path="url(#hexagon)">
+        <image class="svg-image"  width="100" height="100" xlink:href="/assets/img/jon-daiello-avatar.jpg" />
+      </a>
+    </svg>
+
+    <a href="#footer-nav" class="menu-btn" aria-hidden>
+      Menu
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 36">
+        <rect y="32" width="40" height="4" fill="#848476"/>
+        <rect x="0" y="16" width="40" height="4" fill="#848476"/>
+        <rect y="0" width="40" height="4" fill="#848476"/>
+      </svg>
+    </a>
 
     <nav class="global-nav">
       <ul class="global-nav__list">
@@ -26,27 +40,40 @@
     </nav>
 
     <section class="home-intro">
-      <h1>Designer & Front-End Developer</h1>
+      <h1>Designer <span class="amp">&</span> Front-End Developer</h1>
       <p>
         Hi. I’m <a href="#" rel="author">Jon Daiello</a>. I’m passionate about interactive design and front-end development. It’s more than just a job, it’s building great experiences for people on the web. <a href="#">Find out more about me</a>.
       </p>
     </section>
   </header>
 
-  <main>
-
+  <main class="main-content">
+    <section class="article-list content-width">
+      <header>
+        <strong class="subhead">Recent Articles</strong>
+      </header>
+    </section>
   </main>
 
   <footer>
-
+    <nav class="global-nav" id="footer-nav">
+      <ul class="global-nav__list">
+        <li class="global-nav__item"><a href="#">Home</a></li>
+        <li class="global-nav__item"><a href="#">Articles</a></li>
+        <li class="global-nav__item"><a href="#">Snippets &amp; Demos</a></li>
+        <li class="global-nav__item"><a href="#">About</a></li>
+        <li class="global-nav__item"><a href="#">Career</a></li>
+        <li class="global-nav__item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </footer>
-  <script src="/assets/js/app.js"></script>
+  <!--<script src="/assets/js/app.js"></script>-->
   <svg width="0" height="0">
-  	 <defs>
-  		 <clippath id="hexagon">
-  			 <path d="M85.7,98.8h-57L0,49.5L28.3,0h57L114,49.5L85.7,98.8z"/>
-  		 </clippath>
-  	 </def>
+    <defs>
+      <clipPath id="hexagon" clipPathUnits="objectBoundingBox">
+        <polygon points="0,.5 .25,.05 .75,.05 1,.5 .75,.95 .25,.95">
+      </clipPath>
+    </defs>
   </svg>
 </body>
 </html>

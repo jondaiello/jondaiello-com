@@ -13,13 +13,55 @@ html, body {
 }
 
 body {
-  font-size: 1.25em;
+  font-size: calc(95% + 0.5vw);
   line-height: 1.61em;
   font-family: $basefont;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headlinefont;
+  font-weight: normal;
+  color: $primary;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: calc(240% + 0.5vw);
+  line-height: 1em;
+}
+
+h2 {
+  font-size: calc(250% + 0.5vw);
+  line-height: 1.61em;
+}
+
+h3 {
+  font-size: calc(200% + 0.5vw);
+  line-height: 1.61em;
+}
+
+h4 {
+  font-size: calc(150% + 0.5vw);
+  line-height: 1.61em;
+}
+
+h5 {
+  font-size: calc(110% + 0.5vw);
+  line-height: 1.61em;
+}
+
+h6 {
+  font-size: calc(90% + 0.5vw);
+  line-height: 1.61em;
+  text-transform: uppercase;
+}
+
+.subhead {
+  font-family: $metafont;
+  color: $subheadings;
+  font-size: calc(90% + .05vw);
+  letter-spacing: .2em;
+  text-transform: uppercase;
   font-weight: normal;
 }
 
@@ -32,11 +74,22 @@ a:hover {
   color: $linkhover;
 }
 
+
+.content-width {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.global-header {
+  padding-top: 5%;
+}
+
 .global-nav {
   font-family: $navigationfont;
   text-transform: uppercase;
   font-size: 0.65em;
   letter-spacing: .1em;
+  clear: both;
 
   &__list {
     list-style: none;
@@ -48,20 +101,70 @@ a:hover {
     color: $primary;
     text-decoration: none;
   }
-}
 
-.global-face {
-  max-width: 20%;
-  display: block;
-
-  &__image {
-    display: block;
+  .global-header & {
+    display: none;
   }
 }
 
+.global-face {
+  width: 120px;
+  height: 120px;
+  width: 60px;
+  height: 60px;
+  display: block;
+  float: left;
+}
+
+.menu-btn {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  color: $primary;
+  text-transform: uppercase;
+  font-family: $navigationfont;
+  font-size: .65em;
+  letter-spacing: .1em;
+  text-decoration: none;
+  float: right;
+  margin-top: 2.5%;
+
+  img, svg {
+    width: 30px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.2em;
+
+    path, rect {
+      transition: .2s all;
+    }
+  }
+
+  &:hover {
+    path, rect {
+      fill: $linkhover;
+    }
+  }
+}
 
 p, ul, ol {
   a:hover {
     @include animation(linkhover .5s linear 0 infinite alternate);
   }
+}
+
+.home-intro {
+  clear: both;
+  padding-top: 2.5%;
+}
+
+.main-content {
+  clear: both;
+}
+
+.amp {
+  font-family: "Hoefler Text", Baskerville, serif ;
+  font-style: italic;
 }

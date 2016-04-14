@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  font-size: calc(95% + 0.5vw);
+  font-size: calc(95% + 0.4vw);
   line-height: 1.61em;
   font-family: $basefont;
   color: $fontcolor;
@@ -103,7 +103,7 @@ a:hover {
 .global-nav {
   font-family: $navigationfont;
   text-transform: uppercase;
-  font-size: 0.65em;
+  font-size: 0.75em;
   letter-spacing: .1em;
   clear: both;
 
@@ -118,21 +118,22 @@ a:hover {
     text-decoration: none;
   }
 
-  .global-header & {
-    //display: none;
-    height: 0;
-    overflow: hidden;
+  .global-header & {}
 
-    &.open {
-      display: block;
-      height: auto;
-    }
+}
+
+.global-header .global-nav {
+  height: 0;
+  overflow: hidden;
+  @include transition(.2s all);
+
+  &.open {
+    //animation: menuOpen .2s linear 0 1 forward;
+    height: auto;
   }
 }
 
 .global-face {
-  width: 120px;
-  height: 120px;
   width: 60px;
   height: 60px;
   display: block;
@@ -152,7 +153,7 @@ a:hover {
   letter-spacing: .1em;
   text-decoration: none;
   float: right;
-  margin-top: 1.5em;
+  margin-top: 20px;
 
   img, svg {
     width: 30px;
@@ -196,7 +197,13 @@ p, ul, ol {
   font-style: italic;
 }
 
-article {}
+article {
+  margin-bottom: 10%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
   .article-meta {
     font-family: $metafont;
@@ -217,3 +224,45 @@ article {}
       color: $metacolor;
     }
   }
+
+.button {
+  display: inline-block;
+  font-family: $buttonfont;
+  letter-spacing: .3em;
+  font-weight: bold;
+  background: $buttonbg;
+  text-decoration: none;
+  color: $buttoncolor;
+  font-size: .8em;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  padding: 1em 0;
+  position: relative;
+  text-indent: .3em;
+
+
+  &:after {
+    display: block;
+    border-bottom: 5px solid $buttoncolor;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    @include transition(.2s all);
+    @include box-sizing(content-box);
+  }
+
+  &:hover {
+    color: $buttonhovercolor;
+    padding: 1em;
+
+    &:after {
+      height: 100%;
+      left: -5px;
+      border: 5px solid $buttonhovercolor;
+    }
+  }
+}

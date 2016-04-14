@@ -10,6 +10,11 @@
   100% {
     box-shadow: 0 0 5px 100px white, 0 0 30px 100px transparent; } }
 
+/*
+@keyframes menuOpen {
+  0%   { display: none; height: 0; }
+  100%  { display: block; height: auto; }
+}*/
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -23,7 +28,7 @@ html, body {
   font-size: 1rem; }
 
 body {
-  font-size: calc(95% + 0.5vw);
+  font-size: calc(95% + 0.4vw);
   line-height: 1.61em;
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   color: #111; }
@@ -99,7 +104,7 @@ a:hover {
 .global-nav {
   font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 0.65em;
+  font-size: 0.75em;
   letter-spacing: .1em;
   clear: both; }
   .global-nav__list {
@@ -109,16 +114,19 @@ a:hover {
   .global-nav a {
     color: #848476;
     text-decoration: none; }
-  .global-header .global-nav {
-    height: 0;
-    overflow: hidden; }
-    .global-header .global-nav.open {
-      display: block;
-      height: auto; }
+
+.global-header .global-nav {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.2s all;
+  -moz-transition: 0.2s all;
+  -ms-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all; }
+  .global-header .global-nav.open {
+    height: auto; }
 
 .global-face {
-  width: 120px;
-  height: 120px;
   width: 60px;
   height: 60px;
   display: block;
@@ -137,7 +145,7 @@ a:hover {
   letter-spacing: .1em;
   text-decoration: none;
   float: right;
-  margin-top: 1.5em; }
+  margin-top: 20px; }
   .menu-btn img, .menu-btn svg {
     width: 30px;
     height: 16px;
@@ -170,6 +178,11 @@ p a:hover, ul a:hover, ol a:hover {
   font-family: "Hoefler Text", Baskerville, serif;
   font-style: italic; }
 
+article {
+  margin-bottom: 10%; }
+  article:last-child {
+    margin-bottom: 0; }
+
 .article-meta {
   font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   list-style: none;
@@ -184,3 +197,45 @@ p a:hover, ul a:hover, ol a:hover {
   .article-meta a {
     text-decoration: none;
     color: #6f6f6f; }
+
+.button {
+  display: inline-block;
+  font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .3em;
+  font-weight: bold;
+  background: #fff;
+  text-decoration: none;
+  color: #000;
+  font-size: .8em;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  padding: 1em 0;
+  position: relative;
+  text-indent: .3em; }
+  .button:after {
+    display: block;
+    border-bottom: 5px solid #000;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    -webkit-transition: 0.2s all;
+    -moz-transition: 0.2s all;
+    -ms-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box; }
+  .button:hover {
+    color: #197e7d;
+    padding: 1em; }
+    .button:hover:after {
+      height: 100%;
+      left: -5px;
+      border: 5px solid #197e7d; }

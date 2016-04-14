@@ -1,0 +1,13 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import "animations.scss";
+
+@media all and (min-width:768px) {
+  .global-face {
+    width: 120px;
+    height: 120px;
+  }
+  .menu-btn {
+    margin-top: 45px;
+  }
+}

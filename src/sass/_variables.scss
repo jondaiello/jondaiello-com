@@ -3,6 +3,7 @@ $basefont: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Anti
 $headlinefont: $basefont;
 $metafont: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $navigationfont: $metafont;
+$buttonfont: $metafont;
 
 // Font Colors
 $primary: #848476;
@@ -20,3 +21,7 @@ $linkhover: #25bdd4;
 // Other Elements
 
 $bordercolor: #ccc;
+
+$buttonbg: #fff;
+$buttoncolor: #000;
+$buttonhovercolor: $linkcolor;

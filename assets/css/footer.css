@@ -1,0 +1,16 @@
+@keyframes linkhover {
+  0% {
+    color: #197e7d; }
+  100% {
+    color: #25bdd4; } }
+
+@keyframes doppler {
+  0% {
+    box-shadow: 0 0 5px 0 white, 0 0 10px 0 rgba(0, 0, 0, 0.5); }
+  100% {
+    box-shadow: 0 0 5px 100px white, 0 0 30px 100px transparent; } }
+
+.global-footer {
+  border-top: 1px solid #ccc;
+  padding-top: 2.5%;
+  clear: both; }

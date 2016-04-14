@@ -1,0 +1,9 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import "animations.scss";
+
+.global-footer {
+  border-top: 1px solid $bordercolor;
+  padding-top: 2.5%;
+  clear: both;
+}

@@ -4,12 +4,19 @@ $headlinefont: $basefont;
 $metafont: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $navigationfont: $metafont;
 
-// Colors
+// Font Colors
 $primary: #848476;
 $secondary: #197e7d;
 
+$fontcolor: #111;
+$metacolor: #6f6f6f;
 $subheadings: #c6c6c6;
 
 // Links
 $linkcolor: $secondary;
 $linkhover: #25bdd4;
+
+
+// Other Elements
+
+$bordercolor: #ccc;

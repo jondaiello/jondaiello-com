@@ -4,6 +4,12 @@
   100% {
     color: #25bdd4; } }
 
+@keyframes doppler {
+  0% {
+    box-shadow: 0 0 5px 0 white, 0 0 10px 0 rgba(0, 0, 0, 0.5); }
+  100% {
+    box-shadow: 0 0 5px 100px white, 0 0 30px 100px transparent; } }
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -19,46 +25,58 @@ html, body {
 body {
   font-size: calc(95% + 0.5vw);
   line-height: 1.61em;
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; }
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  color: #111; }
+
+p, ul, ol, blockquote, pre {
+  margin-bottom: 2.5%; }
+  p:last-child, ul:last-child, ol:last-child, blockquote:last-child, pre:last-child {
+    margin-bottom: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-weight: normal;
   color: #848476;
-  margin-bottom: 0; }
+  margin: 0; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #111;
+    text-decoration: none; }
 
 h1 {
   font-size: calc(240% + 0.5vw);
-  line-height: 1em; }
+  line-height: 1.1em;
+  margin-top: .2em; }
 
 h2 {
-  font-size: calc(250% + 0.5vw);
-  line-height: 1.61em; }
+  font-size: calc(130% + 0.5vw);
+  line-height: 1.3em; }
 
 h3 {
-  font-size: calc(200% + 0.5vw);
-  line-height: 1.61em; }
+  font-size: calc(120% + 0.5vw);
+  line-height: 1.3em; }
 
 h4 {
-  font-size: calc(150% + 0.5vw);
-  line-height: 1.61em; }
+  font-size: calc(110% + 0.5vw);
+  line-height: 1.3em; }
 
 h5 {
-  font-size: calc(110% + 0.5vw);
-  line-height: 1.61em; }
+  font-size: calc(100% + 0.5vw);
+  line-height: 1.3em; }
 
 h6 {
   font-size: calc(90% + 0.5vw);
-  line-height: 1.61em;
+  line-height: 1.3em;
   text-transform: uppercase; }
 
 .subhead {
   font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #c6c6c6;
-  font-size: calc(90% + .05vw);
-  letter-spacing: .2em;
+  font-size: 80%;
+  letter-spacing: .3em;
   text-transform: uppercase;
-  font-weight: normal; }
+  font-weight: bold;
+  margin-bottom: 5%;
+  display: block; }
 
 a {
   color: #197e7d;
@@ -92,7 +110,11 @@ a:hover {
     color: #848476;
     text-decoration: none; }
   .global-header .global-nav {
-    display: none; }
+    height: 0;
+    overflow: hidden; }
+    .global-header .global-nav.open {
+      display: block;
+      height: auto; }
 
 .global-face {
   width: 120px;
@@ -100,7 +122,8 @@ a:hover {
   width: 60px;
   height: 60px;
   display: block;
-  float: left; }
+  float: left;
+  margin-bottom: 2.5%; }
 
 .menu-btn {
   -webkit-appearance: none;
@@ -114,7 +137,7 @@ a:hover {
   letter-spacing: .1em;
   text-decoration: none;
   float: right;
-  margin-top: 2.5%; }
+  margin-top: 1.5em; }
   .menu-btn img, .menu-btn svg {
     width: 30px;
     height: 16px;
@@ -135,11 +158,29 @@ p a:hover, ul a:hover, ol a:hover {
 
 .home-intro {
   clear: both;
-  padding-top: 2.5%; }
+  padding: 5% 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2.5%; }
 
 .main-content {
-  clear: both; }
+  clear: both;
+  padding-bottom: 2.5%; }
 
 .amp {
   font-family: "Hoefler Text", Baskerville, serif;
   font-style: italic; }
+
+.article-meta {
+  font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 70%;
+  color: #6f6f6f; }
+  .article-meta li {
+    display: inline-block; }
+  .article-meta a {
+    text-decoration: none;
+    color: #6f6f6f; }

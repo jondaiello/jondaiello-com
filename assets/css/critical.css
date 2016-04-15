@@ -31,7 +31,8 @@ body {
   font-size: calc(95% + 0.4vw);
   line-height: 1.61em;
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-  color: #111; }
+  color: #111;
+  position: relative; }
 
 p, ul, ol, blockquote, pre {
   margin-bottom: 2.5%; }
@@ -115,15 +116,16 @@ a:hover {
     color: #848476;
     text-decoration: none; }
 
-.global-header .global-nav {
+#header-nav {
+  display: none;
   height: 0;
-  overflow: hidden;
   -webkit-transition: 0.2s all;
   -moz-transition: 0.2s all;
   -ms-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all; }
-  .global-header .global-nav.open {
+  #header-nav.open {
+    display: block;
     height: auto; }
 
 .global-face {
@@ -177,6 +179,9 @@ p a:hover, ul a:hover, ol a:hover {
 .amp {
   font-family: "Hoefler Text", Baskerville, serif;
   font-style: italic; }
+
+.article-list {
+  padding-bottom: 2.5%; }
 
 article {
   margin-bottom: 10%; }

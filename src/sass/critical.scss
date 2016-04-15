@@ -17,6 +17,7 @@ body {
   line-height: 1.61em;
   font-family: $basefont;
   color: $fontcolor;
+  position: relative;
 }
 
 p, ul, ol, blockquote, pre {
@@ -117,18 +118,15 @@ a:hover {
     color: $primary;
     text-decoration: none;
   }
-
-  .global-header & {}
-
 }
 
-.global-header .global-nav {
+#header-nav {
+  display: none;
   height: 0;
-  overflow: hidden;
   @include transition(.2s all);
 
   &.open {
-    //animation: menuOpen .2s linear 0 1 forward;
+    display: block;
     height: auto;
   }
 }
@@ -195,6 +193,10 @@ p, ul, ol {
 .amp {
   font-family: "Hoefler Text", Baskerville, serif ;
   font-style: italic;
+}
+
+.article-list {
+  padding-bottom: 2.5%;
 }
 
 article {

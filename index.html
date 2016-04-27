@@ -9,11 +9,15 @@
   <link href="/assets/css/critical.css" rel="stylesheet" />
 </head>
 <body>
-  <header class="global-header content-width">
+  <header class="global-header">
     <svg class="global-face" viewBox="0,0 100,100">
       <title>The Face of Jon Daiello</title>
-      <a xlink:href="/">
-        <!-- <a xlink:href="/" clip-path="url(#hexagon)"> -->
+      <defs>
+        <clipPath id="hexagon" clipPathUnits="objectBoundingBox">
+          <polygon points="0,.5 .25,.05 .75,.05 1,.5 .75,.95 .25,.95">
+        </clipPath>
+      </defs>
+      <a xlink:href="/" clip-path="url(#hexagon)">
         <image class="svg-image"  width="100" height="100" xlink:href="/assets/img/jon-daiello-avatar.jpg" />
       </a>
     </svg>
@@ -47,7 +51,8 @@
   </header>
 
   <main class="main-content">
-    <section class="article-list content-width">
+
+    <section class="article-list">
       <header>
         <strong class="subhead">Recent Articles</strong>
       </header>
@@ -102,9 +107,58 @@
         <a href="#" class="button">Read Story</a>
       </article>
     </section>
+
+    <aside>
+      <header>
+        <strong class="subhead">Snippets & Demos</strong>
+      </header>
+
+      <article class="article-aside">
+        <ul class="article-meta">
+          <li><a href="#" class="">#CSS</a></li>
+        </ul>
+        <h2><a href="#">Use :not(:last-child)</a></h2>
+        <p>
+          In some cases it's beneficial to use the CSS selector :not() in place of overriding previously set CSS.
+        </p>
+      </article>
+
+      <article class="article-aside">
+        <ul class="article-meta">
+          <li><a href="#" class="">#CSS</a></li>
+        </ul>
+        <h2><a href="#">Use :not(:last-child)</a></h2>
+        <p>
+          In some cases it's beneficial to use the CSS selector :not() in place of overriding previously set CSS.
+        </p>
+      </article>
+      <article class="article-aside">
+        <ul class="article-meta">
+          <li><a href="#" class="">#CSS</a></li>
+        </ul>
+        <h2><a href="#">Use :not(:last-child)</a></h2>
+        <p>
+          In some cases it's beneficial to use the CSS selector :not() in place of overriding previously set CSS.
+        </p>
+      </article>
+
+      <article class="article-aside">
+        <ul class="article-meta">
+          <li><a href="#" class="">#CSS</a></li>
+        </ul>
+        <h2><a href="#">Use :not(:last-child)</a></h2>
+        <p>
+          In some cases it's beneficial to use the CSS selector :not() in place of overriding previously set CSS.
+        </p>
+      </article>
+
+      <footer>
+        <a href="#">More Snippets & Demos</a>
+      </footer>
+    </aside>
   </main>
 
-  <footer class="global-footer content-width">
+  <footer class="global-footer">
     <link href="/assets/css/footer.css" rel="stylesheet" />
     <nav class="global-nav" id="footer-nav">
       <ul class="global-nav__list">
@@ -116,16 +170,11 @@
         <li class="global-nav__item"><a href="#">Contact</a></li>
       </ul>
     </nav>
+
+    <small>Copyright Jon Daiello. <a href="/disclaimer">Disclaimer</a>. <a href="/article/website-relaunch-and-rebuild">Hand-Crafted</a>.</small>
   </footer>
 
   <link href="/assets/css/responsive.css" rel="stylesheet" />
   <script src="/assets/js/all.js"></script>
-  <svg width="0" height="0">
-    <defs>
-      <clipPath id="hexagon" clipPathUnits="objectBoundingBox">
-        <polygon points="0,.5 .25,.05 .75,.05 1,.5 .75,.95 .25,.95">
-      </clipPath>
-    </defs>
-  </svg>
 </body>
 </html>

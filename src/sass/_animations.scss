@@ -3,12 +3,12 @@
   100%  { color: $linkhover; }
 }
 
-@keyframes doppler {
+/*@keyframes doppler {
   0% { box-shadow: 0 0 5px 0 rgba(255,255,255,1), 0 0 10px 0 rgba(0,0,0,.5); }
   100% { box-shadow: 0 0 5px 100px rgba(255,255,255,1), 0 0 30px 100px rgba(0,0,0,0); }
-}
-/*
-@keyframes menuOpen {
-  0%   { display: none; height: 0; }
-  100%  { display: block; height: auto; }
 }*/
+
+@keyframes menuOpen {
+  0%   { opacity: 0 }
+  100%  { opacity: 1 }
+}

@@ -4,17 +4,16 @@
   100% {
     color: #25bdd4; } }
 
-@keyframes doppler {
-  0% {
-    box-shadow: 0 0 5px 0 white, 0 0 10px 0 rgba(0, 0, 0, 0.5); }
-  100% {
-    box-shadow: 0 0 5px 100px white, 0 0 30px 100px transparent; } }
-
-/*
-@keyframes menuOpen {
-  0%   { display: none; height: 0; }
-  100%  { display: block; height: auto; }
+/*@keyframes doppler {
+  0% { box-shadow: 0 0 5px 0 rgba(255,255,255,1), 0 0 10px 0 rgba(0,0,0,.5); }
+  100% { box-shadow: 0 0 5px 100px rgba(255,255,255,1), 0 0 30px 100px rgba(0,0,0,0); }
 }*/
+@keyframes menuOpen {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -58,21 +57,24 @@ h2 {
   line-height: 1.3em; }
 
 h3 {
-  font-size: calc(120% + 0.5vw);
-  line-height: 1.3em; }
-
-h4 {
   font-size: calc(110% + 0.5vw);
   line-height: 1.3em; }
 
-h5 {
+h4 {
   font-size: calc(100% + 0.5vw);
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  color: #111; }
+
+h5 {
+  font-size: calc(85% + 0.5vw);
+  line-height: 1.3em;
+  color: #111; }
 
 h6 {
-  font-size: calc(90% + 0.5vw);
+  font-size: calc(60% + 0.5vw);
   line-height: 1.3em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #111; }
 
 .subhead {
   font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -102,21 +104,18 @@ a:hover {
 .global-header {
   padding-top: 5%; }
 
+.global-header,
+.main-content,
+.global-footer {
+  padding-left: 5%;
+  padding-right: 5%; }
+
 .global-nav {
   font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 0.75em;
   letter-spacing: .1em;
-  clear: both; }
-  .global-nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .global-nav a {
-    color: #848476;
-    text-decoration: none; }
-
-#header-nav {
+  clear: both;
   display: none;
   height: 0;
   -webkit-transition: 0.2s all;
@@ -124,9 +123,23 @@ a:hover {
   -ms-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all; }
-  #header-nav.open {
+  .global-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .global-nav a {
+    color: #848476;
+    text-decoration: none; }
+    .global-nav a:hover {
+      color: #25bdd4; }
+  .global-nav.open {
     display: block;
-    height: auto; }
+    height: auto;
+    -webkit-animation: menuOpen 0.2s linear 0s 1;
+    -moz-animation: menuOpen 0.2s linear 0s 1;
+    -ms-animation: menuOpen 0.2s linear 0s 1;
+    -o-animation: menuOpen 0.2s linear 0s 1;
+    animation: menuOpen 0.2s linear 0s 1; }
 
 .global-face {
   width: 60px;
@@ -147,7 +160,7 @@ a:hover {
   letter-spacing: .1em;
   text-decoration: none;
   float: right;
-  margin-top: 20px; }
+  margin-top: 15px; }
   .menu-btn img, .menu-btn svg {
     width: 30px;
     height: 16px;
@@ -159,18 +172,14 @@ a:hover {
   .menu-btn:hover path, .menu-btn:hover rect {
     fill: #25bdd4; }
 
-p a:hover, ul a:hover, ol a:hover {
-  -webkit-animation: linkhover 0.5s linear 0 infinite alternate;
-  -moz-animation: linkhover 0.5s linear 0 infinite alternate;
-  -ms-animation: linkhover 0.5s linear 0 infinite alternate;
-  -o-animation: linkhover 0.5s linear 0 infinite alternate;
-  animation: linkhover 0.5s linear 0 infinite alternate; }
-
-.home-intro {
+.home-intro,
+article header {
   clear: both;
   padding: 5% 0;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 2.5%; }
+  border-bottom: 1px solid #ccc; }
+
+article aside header {
+  border-bottom: 0; }
 
 .main-content {
   clear: both;
@@ -180,13 +189,25 @@ p a:hover, ul a:hover, ol a:hover {
   font-family: "Hoefler Text", Baskerville, serif;
   font-style: italic; }
 
-.article-list {
-  padding-bottom: 2.5%; }
+.article-list,
+.article-content {
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  float: left;
+  width: 100%; }
 
 article {
   margin-bottom: 10%; }
   article:last-child {
     margin-bottom: 0; }
+  article.article-aside {
+    font-size: .9em;
+    line-height: 1.7em; }
+    article.article-aside h1, article.article-aside h2, article.article-aside h3, article.article-aside h4, article.article-aside h5, article.article-aside h6 {
+      margin-bottom: 0; }
+    article.article-aside p {
+      font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin-top: 0; }
 
 .article-meta {
   font-family: Calibri, Frutiger, "Frutiger Linotype", Univers, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -244,3 +265,14 @@ article {
       height: 100%;
       left: -5px;
       border: 5px solid #197e7d; }
+
+aside {
+  clear: both;
+  border-top: 1px solid #ccc;
+  padding-top: 5%; }
+  aside footer {
+    clear: both; }
+
+.article-detail {
+  clear: right;
+  padding-top: 45px; }

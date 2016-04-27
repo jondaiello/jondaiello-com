@@ -52,24 +52,27 @@ h2 {
 }
 
 h3 {
-  font-size: calc(120% + 0.5vw);
-  line-height: 1.3em;
-}
-
-h4 {
   font-size: calc(110% + 0.5vw);
   line-height: 1.3em;
 }
 
-h5 {
+h4 {
   font-size: calc(100% + 0.5vw);
   line-height: 1.3em;
+  color: $fontcolor;
+}
+
+h5 {
+  font-size: calc(85% + 0.5vw);
+  line-height: 1.3em;
+  color: $fontcolor;
 }
 
 h6 {
-  font-size: calc(90% + 0.5vw);
+  font-size: calc(60% + 0.5vw);
   line-height: 1.3em;
   text-transform: uppercase;
+  color: $fontcolor;
 }
 
 .subhead {
@@ -101,12 +104,22 @@ a:hover {
   padding-top: 5%;
 }
 
+.global-header,
+.main-content,
+.global-footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .global-nav {
   font-family: $navigationfont;
   text-transform: uppercase;
   font-size: 0.75em;
   letter-spacing: .1em;
   clear: both;
+  display: none;
+  height: 0;
+  @include transition(.2s all);
 
   &__list {
     list-style: none;
@@ -117,17 +130,16 @@ a:hover {
   a {
     color: $primary;
     text-decoration: none;
-  }
-}
 
-#header-nav {
-  display: none;
-  height: 0;
-  @include transition(.2s all);
+    &:hover {
+      color: $linkhover;
+    }
+  }
 
   &.open {
     display: block;
     height: auto;
+    @include animation(menuOpen .2s linear 0s 1);
   }
 }
 
@@ -151,7 +163,7 @@ a:hover {
   letter-spacing: .1em;
   text-decoration: none;
   float: right;
-  margin-top: 20px;
+  margin-top: 15px;
 
   img, svg {
     width: 30px;
@@ -174,15 +186,19 @@ a:hover {
 
 p, ul, ol {
   a:hover {
-    @include animation(linkhover .5s linear 0 infinite alternate);
+    //@include animation(linkhover .5s linear 0 infinite alternate);
   }
 }
 
-.home-intro {
+.home-intro,
+article header {
   clear: both;
   padding: 5% 0;
   border-bottom: 1px solid $bordercolor;
-  margin-bottom: 2.5%;
+}
+
+article aside header {
+  border-bottom: 0;
 }
 
 .main-content {
@@ -195,8 +211,12 @@ p, ul, ol {
   font-style: italic;
 }
 
-.article-list {
-  padding-bottom: 2.5%;
+.article-list,
+.article-content {
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  float: left;
+  width: 100%;
 }
 
 article {
@@ -204,6 +224,20 @@ article {
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &.article-aside {
+    font-size: .9em;
+    line-height: 1.7em;
+
+    h1,h2,h3,h4,h5,h6 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-family: $asidebase;
+      margin-top: 0;
+    }
   }
 }
 
@@ -267,4 +301,21 @@ article {
       border: 5px solid $buttonhovercolor;
     }
   }
+}
+
+aside {
+  clear: both;
+  border-top: 1px solid $bordercolor;
+  padding-top: 5%;
+  //font-size: .9em;
+  //line-height: 1.7em;
+
+  footer {
+    clear: both;
+  }
+}
+
+.article-detail {
+  clear: right;
+  padding-top: 45px;
 }

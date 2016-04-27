@@ -3,7 +3,18 @@
 @import "animations.scss";
 
 .global-footer {
-  border-top: 1px solid $bordercolor;
-  padding-top: 2.5%;
+  padding: 2.5% 5%;
   clear: both;
+  margin-top: 2.5%;
+  background: #f1f1f1;
+  border-top: 1px solid $bordercolor;
+
+  .global-nav {
+    border: 0;
+    padding-bottom: 1em;
+  }
+
+  small {
+    font-size: .7em;
+  }
 }

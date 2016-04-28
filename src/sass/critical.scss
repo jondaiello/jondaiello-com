@@ -319,3 +319,48 @@ aside {
   clear: right;
   padding-top: 45px;
 }
+
+pre {
+  background: $prebkg;
+  padding: .5em 1em;
+}
+
+code {
+  background: $prebkg;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.3em;
+  padding: .3em .5em;
+  position: relative;
+
+  color: $codecolor;
+  font-size: .8em;
+}
+
+blockquote {
+  color: $primary;
+  font-style: italic;
+  font-size: 2em;
+  line-height: 1.5em;
+  margin: 0;
+
+  p,
+  p:last-child {
+    margin: 1em 0;
+  }
+}
+
+table {
+  border: 1px solid $bordercolor;
+  padding: 0;
+  font-size: .9em;
+}
+
+  th {
+    background: $bordercolor;
+  }
+
+  td, th {
+    border: 0;
+    padding: .3em .7em;
+  }

@@ -124,6 +124,12 @@
   aside {
     padding-right: 5%;
   }
+
+  .article-content {
+    blockquote {
+      width: 130%;
+    }
+  }
 }
 
 
@@ -133,12 +139,20 @@
     line-height: 1.7em;
   }
 
+  code {
+    font-size: 1em;
+  }
+
   .article-list,
   .article-content {
     float: left;
     width: 70.9%;
     border-right: 1px solid $bordercolor;
     padding-right: 5%;
+  }
+
+  .article-content {
+    border: 0;
   }
 
   aside {
@@ -161,9 +175,6 @@
     .article-aside {
       width: 100%;
       margin-right: 0;
-
-
-
     }
   }
 }

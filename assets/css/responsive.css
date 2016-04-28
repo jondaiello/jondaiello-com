@@ -94,18 +94,24 @@
   .article-list,
   .article-content,
   aside {
-    padding-right: 5%; } }
+    padding-right: 5%; }
+  .article-content blockquote {
+    width: 130%; } }
 
 @media all and (min-width: 1280px) {
   body {
     font-size: 1.25em;
     line-height: 1.7em; }
+  code {
+    font-size: 1em; }
   .article-list,
   .article-content {
     float: left;
     width: 70.9%;
     border-right: 1px solid #ccc;
     padding-right: 5%; }
+  .article-content {
+    border: 0; }
   aside {
     float: right;
     width: 29.1%;

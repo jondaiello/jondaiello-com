@@ -149,6 +149,11 @@
     width: 70.9%;
     border-right: 1px solid $bordercolor;
     padding-right: 5%;
+
+    &.category,
+    &.snippets-demos {
+      border-right: 0;
+    }
   }
 
   .article-content {

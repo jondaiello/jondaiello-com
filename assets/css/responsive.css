@@ -110,6 +110,10 @@
     width: 70.9%;
     border-right: 1px solid #ccc;
     padding-right: 5%; }
+    .article-list.category, .article-list.snippets-demos,
+    .article-content.category,
+    .article-content.snippets-demos {
+      border-right: 0; }
   .article-content {
     border: 0; }
   aside {

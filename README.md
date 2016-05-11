@@ -20,3 +20,8 @@ These are the purpose of the redesign.
 - Make use of system fonts
 - Use Gulp via npm.
 - It works (well) without Javascript.
+
+## Future Features
+- Include snippets & demos section
+- Utilize prizm.js for syntax highlighting
+- Build a 'night' mode. :)

@@ -23,5 +23,5 @@ These are the purpose of the redesign.
 
 ## Future Features
 - Include snippets & demos section
-- Utilize prizm.js for syntax highlighting
+- Utilize [prizm.js](http://prismjs.com/) for syntax highlighting
 - Build a 'night' mode. :)

@@ -18,6 +18,7 @@ These are the purpose of the redesign.
 - Utilize SVGs & CSS shapes
 - Node and JS
 - It works (well) without Javascript in browser.
+- Continuous integration support
 
 ## Future Features
 - Include snippets & demos section

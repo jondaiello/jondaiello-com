@@ -1,0 +1,17 @@
+<article>
+  <header>
+    <H1><%- partial('post/title', {class_name: 'article-title'}) %></H1>
+    Date: <%- partial('post/date', {class_name: null, date_format: null}) %><br/>
+    <%- partial('post/category') %>
+    <%- partial('post/tag') %>
+  </header>
+
+  <% if (post.excerpt && index){ %>
+    <%- post.excerpt %>
+    <% if (theme.excerpt_link){ %>
+      <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+    <% } %>
+  <% } else { %>
+    <%- post.content %>
+  <% } %>
+</article>

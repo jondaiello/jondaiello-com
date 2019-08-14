@@ -1,15 +1,167 @@
+// settings
+$clr-primary: #A59250;
+$clr-text: #433E2C;
+$clr-text-lighter: #DEDEDE;
+$clr-text-lightest: #C1BFB7;
+
+$font-base: mencken-std, "Georgia", Times, serif;
+$font-alt: benton-sans, sans-serif;
+
+$shadow-0: 0 0 0 0 rgba(0,0,0,.05);
+$shadow-1: 0 1px 4px 0 rgba(0,0,0,.05);
+$shadow-2: 0 4px 8px 0 rgba(0,0,0,.05);
+$shadow-3: 0 8px 16px 0 rgba(0,0,0,.05);
+$shadow-4: 0 16px 32px 0 rgba(0,0,0,.05);
+$shadow-0: 0 32px 64px 0 rgba(0,0,0,.05);
+
+$size-tablet-min: 768px;
+
+// base styles
+body {
+  color: $clr-text;
+}
+
+a {
+  color: $clr-primary;
+  text-decoration: none;
+}
+
+
+// resets
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+// covering the bases
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+}
+
+// components
+.c-btn {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: $font-alt;
+  font-weight: 700;
+
+  svg, img {
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-bottom: .4em;
+  }
+
+  &--icon-right {
+    svg, img {
+      margin-left: .5em;
+    }
+  }
+
+  &-quiet {
+    &--primary {
+
+    }
+  }
+}
+
+.c-avatar {
+  width: 78px;
+  object-fit: cover;
+  border-radius: 300px;
+  overflow: hidden;
+  box-shadow: $shadow-2;
+
+  &--mini {
+    width: 56px;
+  }
+
+  @media all and (min-width: $size-tablet-min) {
+    width: 284px;
+  }
+}
+
+
+// utitlies
 .u-font-base {
-  font-family: mencken-std, "Georgia", Times, serif;
+  font-family: $font-base;
   font-weight: 400;
   font-style: normal;
 }
 
 .u-font-alt {
-  font-family: benton-sans, sans-serif;
+  font-family: $font-alt;
   font-weight: 500;
   font-style: normal;
 }
 
-.u-style-italic {
+em, i, .u-style-italic {
   font-style: italic;
+}
+
+.u-subtitle {
+  font-size: 12px;
+  font-style: italic;
+  color: $clr-text-lightest;
+}
+
+.u-h1 {
+  font-size: 24px;
+
+  @media all and (min-width: $size-tablet-min) {
+    font-size: 48px;
+  }
+
+
+  &--jumbo {
+    font-size: 40px;
+    margin-bottom: 0;
+
+    @media all and (min-width: $size-tablet-min) {
+      font-size: 160px;
+    }
+  }
+}
+
+.u-h2 {
+
+}
+
+// one-offs
+
+.home-blurb {
+  margin-top: 1em;
+}
+
+.home-filters {
+  margin-top: 2em;
+}
+
+.filter-heading {
+  svg, img {
+    margin-left: .25em;
+  }
+}
+
+.filter-section {
+  margin-bottom: 1em;
+
+  ul {
+    display: none;
+    opacity: 0;
+  }
 }

@@ -1,5 +1,55 @@
+body {
+  color: #433E2C; }
+
+a {
+  color: #A59250;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  font-size: 1em;
+  line-height: 1.6; }
+
+p {
+  margin: 0 0 1em 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; }
+
+.c-btn {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: benton-sans, sans-serif;
+  font-weight: 700; }
+  .c-btn svg, .c-btn img {
+    display: inline-block;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-bottom: .4em; }
+  .c-btn--icon-right svg, .c-btn--icon-right img {
+    margin-left: .5em; }
+
+.c-avatar {
+  width: 78px;
+  object-fit: cover;
+  border-radius: 300px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05); }
+  .c-avatar--mini {
+    width: 56px; }
+  @media all and (min-width: 768px) {
+    .c-avatar {
+      width: 284px; } }
+
 .u-font-base {
-  font-family: mencken-std, sans-serif;
+  font-family: mencken-std, "Georgia", Times, serif;
   font-weight: 400;
   font-style: normal; }
 
@@ -8,5 +58,37 @@
   font-weight: 500;
   font-style: normal; }
 
-.u-style-italic {
+em, i, .u-style-italic {
   font-style: italic; }
+
+.u-subtitle {
+  font-size: 12px;
+  font-style: italic;
+  color: #C1BFB7; }
+
+.u-h1 {
+  font-size: 24px; }
+  @media all and (min-width: 768px) {
+    .u-h1 {
+      font-size: 48px; } }
+  .u-h1--jumbo {
+    font-size: 40px;
+    margin-bottom: 0; }
+    @media all and (min-width: 768px) {
+      .u-h1--jumbo {
+        font-size: 160px; } }
+
+.home-blurb {
+  margin-top: 1em; }
+
+.home-filters {
+  margin-top: 2em; }
+
+.filter-heading svg, .filter-heading img {
+  margin-left: .25em; }
+
+.filter-section {
+  margin-bottom: 1em; }
+  .filter-section ul {
+    display: none;
+    opacity: 0; }

@@ -3,6 +3,7 @@ $clr-primary: #A59250;
 $clr-text: #433E2C;
 $clr-text-lighter: #DEDEDE;
 $clr-text-lightest: #C1BFB7;
+$clr-border: #F0F0F0;
 
 $font-base: mencken-std, "Georgia", Times, serif;
 $font-alt: benton-sans, sans-serif;
@@ -16,18 +17,16 @@ $shadow-0: 0 32px 64px 0 rgba(0,0,0,.05);
 
 $size-tablet-min: 768px;
 
-// base styles
-body {
-  color: $clr-text;
-}
-
-a {
-  color: $clr-primary;
-  text-decoration: none;
+@function space($mulitplier) {
+  @return 8px * $mulitplier;
 }
 
 
 // resets
+html, body {
+  padding: 0;
+  margin: 0;
+}
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
@@ -42,6 +41,12 @@ html {
 body {
   font-size: 1em;
   line-height: 1.6;
+  color: $clr-text;
+}
+
+a {
+  color: $clr-primary;
+  text-decoration: none;
 }
 
 p {
@@ -141,6 +146,14 @@ em, i, .u-style-italic {
 
 }
 
+.u-container {
+  padding: space(1);
+
+  @media all and (min-width: $size-tablet-min) {
+    padding: space(3);
+  }
+}
+
 // one-offs
 
 .home-blurb {
@@ -149,9 +162,20 @@ em, i, .u-style-italic {
 
 .home-filters {
   margin-top: 2em;
+  border-bottom: 8px solid $clr-border;
+  margin-bottom: 1em;
+  margin-left: space(1);
+  padding-left: 0;
+
+  @media all and (min-width: $size-tablet-min) {
+    margin-left: space(3);
+  }
 }
 
 .filter-heading {
+  color: $clr-text-lighter;
+  cursor: pointer;
+
   svg, img {
     margin-left: .25em;
   }
@@ -163,5 +187,11 @@ em, i, .u-style-italic {
   ul {
     display: none;
     opacity: 0;
+    transition: all .2s ease-in-out;
+
+    &.mobile-visible {
+      display: block;
+      opacity: 1;
+    }
   }
 }

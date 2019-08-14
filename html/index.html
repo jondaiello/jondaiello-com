@@ -10,8 +10,8 @@
 </head>
 <body class="u-font-base">
   <header>
-    <section class="main-nav"></section>
-    <section class="intro">
+    <section class="main-nav u-container"></section>
+    <section class="intro u-container">
       <img class="c-avatar" srcset="img/jon-daiello-2018-spring.jpg 300w,
       img/jon-daiello-2018-spring@2x.jpg 600w"
      sizes="(max-width: 320px) 156px,
@@ -31,7 +31,7 @@
         </p>
       </div>
     </section>
-    <section class="home-filters">
+    <section class="u-container home-filters">
       <div class="filter-section">
 
         <h1 class="u-h1 filter-heading js-filter-heading" data-filter-type="media">
@@ -48,7 +48,7 @@
         </ul>
       </div>
       <div class="filter-section">
-        <h1 class="u-h1 filter-heading  js-filter-heading">
+        <h1 class="u-h1 filter-heading js-filter-heading" data-filter-type="theme">
           Themes
           <svg width="10" height="18">
             <use xlink:href="#caret-right" x="0" y="0" />
@@ -96,10 +96,13 @@
     </svg>
   </div>
   <script>
+    // show and hide filter divs on the homepage
     var filterRevealTriggers = document.querySelectorAll(".js-filter-heading");
-
-    filterRevealTriggers.addEventListener("click", function() {
-
+    filterRevealTriggers.forEach(function(headingFilter) {
+      headingFilter.addEventListener("click", function(e) {
+        let filterListTarget = document.getElementById("filter-"+headingFilter.dataset.filterType+"-type");
+        filterListTarget.classList.toggle("mobile-visible");
+      });
     });
   </script>
 </body>

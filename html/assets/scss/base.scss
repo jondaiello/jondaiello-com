@@ -1,0 +1,142 @@
+$basesize: 8px;
+$fontstack-primary: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$fontstack-alt: "Baskerville", "Times", serif;
+$clr-meta: #C1BFB7;
+$clr-link: #8B7516;
+$clr-darkest: #22211E;
+
+@function size($multiplier) {
+  @return $basesize * $multiplier;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontstack-primary;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  background: white url(img/background-plant@2x.png) no-repeat top right;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: $clr-darkest;
+  line-height: 140%;
+}
+
+a {
+  color: $clr-link;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6  {
+  font-family: $fontstack-alt;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1em;
+  margin: size(2) 0 size(1);
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  margin-bottom: size(2);
+}
+
+h1.jumbo {
+  font-size: size(8);
+  margin-bottom: size(2);
+}
+
+h1 {
+  font-size: size(6);
+  line-height: 1em;
+}
+
+h2 {
+  font-size: size(5);
+  line-height: 1em;
+}
+
+h3 {
+  font-size: size(4);
+  line-height: 1em;
+}
+
+h4 {
+  font-size: size(3);
+  line-height: 1em;
+}
+
+h5 {
+  font-size: size(2);
+  line-height: 1em;
+}
+
+header {
+  padding: 15vh size(2);
+  text-align: center;
+
+  img {
+    max-width: size(12);
+  }
+  h1 {
+  }
+  .subtitle {
+    color: $clr-meta;
+  }
+  &.condensed {
+    text-align: left;
+  }
+}
+
+section[role="main"] {
+  padding: size(2);
+}
+
+.article-preview {
+  margin-bottom: size(5);
+
+  p {
+    margin-bottom: size(1);
+  }
+
+  h1 {
+    margin-left: -.05em;
+  }
+
+  img {
+    float: right;
+    margin-left: size(2);
+  }
+
+  .meta {
+    color: $clr-meta;
+    font-size: size(1.5);
+
+    a {
+      color: $clr-meta;
+      text-decoration: none;
+    }
+  }
+
+}
+
+footer {
+  background: $clr-darkest;
+  padding: 0 size(2);
+  color: $clr-meta;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-left: size(1);
+    }
+  }
+}

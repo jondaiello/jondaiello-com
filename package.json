@@ -1,0 +1,23 @@
+{
+  "name": "jondaiello-com",
+  "version": "1.0.0",
+  "description": "This is the repository for my personal site. I'm redesigning and rebuilding my site from the ground up.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondaiello/jondaiello-com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jondaiello/jondaiello-com/issues"
+  },
+  "homepage": "https://github.com/jondaiello/jondaiello-com#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

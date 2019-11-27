@@ -3,7 +3,11 @@ $fontstack-primary: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sa
 $fontstack-alt: "Baskerville", "Times", serif;
 $clr-meta: #C1BFB7;
 $clr-link: #8B7516;
+$clr-lightest: #F8F8F8;
 $clr-darkest: #22211E;
+
+$breakpoint-med: 1024px;
+$breakpoint-lg: 1280px;
 
 @function size($multiplier) {
   @return $basesize * $multiplier;
@@ -23,7 +27,12 @@ body {
   display: flex;
   flex-direction: column;
   color: $clr-darkest;
-  line-height: 140%;
+  line-height: 160%;
+
+  @media all and (min-width: $breakpoint-med) {
+    background-size: 50% auto;
+  }
+  @media all and (min-width: $breakpoint-lg) {}
 }
 
 a {
@@ -38,6 +47,16 @@ h1, h2, h3, h4, h5, h6  {
   line-height: 1em;
   margin: size(2) 0 size(1);
   padding: 0;
+
+  &.meta {
+    font-size: .75em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $fontstack-primary;
+    color: $clr-meta;
+    font-style: normal;
+    margin: size(1) 0;
+  }
 }
 
 p {
@@ -46,38 +65,80 @@ p {
 }
 
 h1.jumbo {
-  font-size: size(8);
-  margin-bottom: size(2);
+  font-size: 4em;
+  margin-bottom: 0;
+  line-height: 1em;
 }
 
 h1 {
-  font-size: size(6);
+  font-size: 3em;
   line-height: 1em;
 }
 
 h2 {
-  font-size: size(5);
+  font-size: 2.5em;
   line-height: 1em;
 }
 
 h3 {
-  font-size: size(4);
+  font-size: 2em;
   line-height: 1em;
 }
 
 h4 {
-  font-size: size(3);
+  font-size: 1.5em;
   line-height: 1em;
 }
 
 h5 {
-  font-size: size(2);
+  font-size: 1em;
   line-height: 1em;
 }
 
+@media all and (min-width: $breakpoint-med) {
+  body {
+    font-size: 1.2em;
+    line-height: 160%;
+  }
+
+  h1.jumbo {
+    font-size: calc(size(10) + 10vw);
+    margin-bottom: size(2);
+  }
+
+  h1 {
+    font-size: calc(size(8) + 10vw);
+    line-height: 1em;
+  }
+
+  h2 {
+    font-size: size(5);
+    line-height: 1em;
+  }
+
+  h3 {
+    font-size: size(4);
+    line-height: 1em;
+  }
+
+  h4 {
+    font-size: size(3);
+    line-height: 1em;
+  }
+
+  h5 {
+    font-size: size(2);
+    line-height: 1em;
+  }
+}
+
 header {
-  padding: 15vh size(2);
-  text-align: center;
+  padding: 10vh size(2);
+  text-align: left;
+
+  a {
+    color: $clr-darkest;
+  }
 
   img {
     max-width: size(12);
@@ -88,12 +149,52 @@ header {
     color: $clr-meta;
   }
   &.condensed {
-    text-align: left;
+    padding: size(2) size(2) size(1.75) size(2);
+    background: white;
+    box-shadow: 0 4px 16px 0 rgba(96,116,131, .06);
+
+    img {
+      display: inline-block;
+      max-width: size(4);
+      margin: -8px 0 -4px 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+    h1 {
+      display: inline-block;
+      width: auto;
+      font-size: size(3);
+      margin: 0 0 0 size(1);
+      padding: 0;
+      line-height: 100%;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-med) {
+    max-width: size(100);
+    width: size(100);
+    margin:auto;
+  }
+  @media all and (min-width: $breakpoint-med) {
+    max-width: size(100);
+    width: size(100);
   }
 }
 
-section[role="main"] {
+section[role="main"],
+article[role="main"],
+.container {
   padding: size(2);
+  margin: 0 auto;
+
+  @media all and (min-width: $breakpoint-med) {
+    max-width: size(100);
+  }
+}
+
+hr {
+  border: 1px solid $clr-lightest;
+  margin: size(4) 0;
 }
 
 .article-preview {
@@ -105,23 +206,23 @@ section[role="main"] {
 
   h1 {
     margin-left: -.05em;
+    margin-bottom: .05em;
   }
 
   img {
     float: right;
     margin-left: size(2);
   }
+}
 
-  .meta {
+p.meta {
+  color: $clr-meta;
+  font-size: 1em;
+
+  a {
     color: $clr-meta;
-    font-size: size(1.5);
-
-    a {
-      color: $clr-meta;
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
-
 }
 
 footer {
@@ -131,11 +232,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   p {
     padding: 0;
     margin: 0;
-
   }
 
   ul {
@@ -146,6 +247,103 @@ footer {
     li {
       display: inline-block;
       margin-left: size(1);
+    }
+  }
+}
+
+.author-bio {
+  width: calc(100% + size(2));
+  background: $clr-lightest;
+  color: $clr-darkest;
+  margin: size(-2) size(-2) 0 size(-2);
+  padding: size(1) size(2) size(2) size(2);
+
+  h1 {
+    font-size: 1.5em;
+    color: $clr-meta;
+  }
+}
+
+article[role="main"] {
+  img {
+    max-width: 100%;
+  }
+}
+
+blockquote {
+  color: lighten($clr-darkest,30%);
+  font-style: italic;
+  line-height: 150%;
+  font-family: $fontstack-alt;
+  margin: size(3) auto;
+  width: 80%;
+
+  @media all and (min-width: $breakpoint-med) {
+    width: 90%;
+    display: block;
+    font-size: 1.25em;
+
+    &.align-left {
+      max-width: 50%;
+      float: left;
+    }
+
+    &.align-right {
+      max-width: 50%;
+      float: right;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-lg) {
+    display: block;
+    font-size: 1.5em;
+  }
+}
+
+
+@media all and (min-width: $breakpoint-med) {
+  article[role="main"] {
+    img {
+      &.full-width {}
+      &.full-width-extended {}
+      &.left-align {
+        float: left;
+        max-width: 50%;
+        margin-right: size(3);
+        clear: both;
+      }
+      &.right-align {
+        float: right;
+        max-width: 50%;
+        margin-left: size(3);
+        clear: both;
+      }
+    }
+  }
+}
+
+@media all and (min-width: $breakpoint-lg) {
+  article[role="main"] {
+    img {
+      &.full-width {}
+      &.full-width-extended {
+        max-width: 120%;
+        margin-left: -10%;
+      }
+      &.left-align {
+        float: left;
+        max-width: 50%;
+        margin-right: size(3);
+        clear: both;
+        margin-left: -10%;
+      }
+      &.right-align {
+        float: right;
+        max-width: 50%;
+        margin-left: size(3);
+        clear: both;
+        margin-right: -10%;
+      }
     }
   }
 }

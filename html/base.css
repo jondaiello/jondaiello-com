@@ -84,12 +84,18 @@ section[role="main"] {
 
 footer {
   background: #22211E;
-  padding: 0 16px;
+  padding: 16px;
   color: #C1BFB7;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
+  footer p {
+    padding: 0;
+    margin: 0; }
   footer ul {
-    list-style: none; }
+    list-style: none;
+    margin: 0;
+    padding: 0; }
     footer ul li {
       display: inline-block;
       margin-left: 8px; }

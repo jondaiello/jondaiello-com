@@ -126,13 +126,22 @@ section[role="main"] {
 
 footer {
   background: $clr-darkest;
-  padding: 0 size(2);
+  padding: size(2);
   color: $clr-meta;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  p {
+    padding: 0;
+    margin: 0;
+
+  }
 
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 
     li {
       display: inline-block;
